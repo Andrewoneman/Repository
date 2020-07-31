@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GA Lab | Games for you</title>
+</head>
+<body>
+    <div class="container-0">
+        <h1>Welcome to enjoy some cool JS games! 😉</p> 
+        </h1>
+    </div>
+
+    <div class="container-1">
+        <h2>Game 1: Ваш возраст в днях</h2>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-primary" onclick="ageInDays()">Нажми меня</button>
+            </div>
+
+            <div>
+                <button class="btn btn-danger" onclick="reset()">Очистить</button>
+            </div>
+        </div>
+        <div class="flex-box-container-1">
+            <div id="flex-box-result"></div>
+        </div>
+    </div>
+
+    <div class="container-2">
+        <h2>Game 2: Котогенератор</h2>
+        <div class="flex-box-container-2">
+            <div class="bottoncat">       
+                <button class="btn btn-success" id="cat-gen" onclick="generateCat()">Создать кота</button> 
+            </div>           
+        </div>
+        <div class="flex-box-container-2" id="flex-cat-gen">
+           
+        </div>
+    </div>
+
+    <div class="container-3">
+        <h2>Game 3: Камень, ножницы, бумага</h2>
+        <div class="flex-box-container-3"> 
+            <div class="flex-box-rps" id="flex-box-rps-div">
+                <img id="rock" src="img/stone.jpg" alt="" onclick="rpsGame(this)">
+                <img id="paper" src="img/paper.jpg" alt="" onclick="rpsGame(this)">
+                <img id="scissors" src="img/scissors.jpg" alt="" onclick="rpsGame(this)">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-4">
+        <h2 id="change-my-color">Game 4: Поменяй цвет кнопок</h2>
+        <div class="flex-box-pick-color">
+            <form action="">
+                <select name="backdrop" id="background" onchange="buttonColorChange(this)">
+                    <option value="random">Случайно</option>
+                    <option value="red">Красный</option>
+                    <option value="blue">Синий</option>
+                    <option value="green">Зелёный</option>
+                    <option value="reset">Сбросить</option>
+                </select>
+            </form>
+            <button class="btn btn-primary" onclick="window.open('https://www.instagram.com/', '_blank')">Instagram</button>
+            <button class="btn btn-danger" onclick="window.open('https://yandex.ru/', '_blank')">Яндекс</button>
+            <button class="btn btn-warning" onclick="window.open('https://www.google.com/', '_blank')">Google</button>
+            <button class="btn btn-success" onclick="window.open('https://vk.com/', '_blank')">Вконтакте</button>
+        </div>
+    </div>
+
+    <div class="container-5">
+        <h2>Game 5: Очко (21)</h2>
+        <h3><span id="blackjack-result">Let's play</span></h3>
+        <div class="flex-blackjack-row-1">
+            <div id="your-box">
+                <h2>You: <span id="your-blackjack-result">0</span></h2>
+            </div>
+            <div id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+            </div>
+        </div>
+        <div class="flex-blackjack-row-2">
+            <div>
+                <button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+                <button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">Stand</button>
+                <button class="btn-lg btn-danger" id="blackjack-deal-button">Deal</button>
+            </div>
+        </div>
+        <div class="flex-blackjack-row-3">
+            <table>
+                <tr>
+                    <th>Вы выиграли!</th>
+                    <th>Вы проиграли!</th>
+                    <th>Ничья</th>
+                </tr>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="the_bottom">
+            <h6>© 2020 Template by GA Lab™ Все права защищены.</h6>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
