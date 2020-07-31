@@ -1,0 +1,85 @@
+*, *:before, *:after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.paralax{
+    position: relative;
+    height: 100%;
+}
+.paralax__mountain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.paralax__mountain-1{
+    background: url(../images/m_1.png) 0 0 / cover no-repeat;
+}
+.paralax__mountain-2{
+    z-index: 1;
+    background: url(../images/m_2.png) bottom right / 45% no-repeat;
+}
+.paralax__mountain-3{
+    z-index: 1;
+    background: url(../images/m_3.png) bottom left / 100% no-repeat;
+}
+.paralax__fog{
+    background: url(../images/fog_1.png) bottom / 100% no-repeat;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.content{
+    position: relative;
+}
+.content__body{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.content__header{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.content__title{
+    font-size: 160px;
+    font-family: 'Recursive', sans-serif;
+}
+.content__subtitle{
+    font-size: 80px;
+    font-family: 'Recursive', sans-serif;
+}
+.content__article{
+    font-family: 'Dancing Script', cursive;
+    padding: 25px;
+    font-size: 20px;
+    line-height: 24px;
+}
+.content__article p{
+    margin-bottom: 20px;
+    text-align: center;
+}
