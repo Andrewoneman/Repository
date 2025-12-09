@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: BankMenegmentCard
+
+  # НАСТРОЙКИ БАЗЫ ДАННЫХ
+  # Для разработки используем H2 (in-memory)
+  # ДЛЯ ПЕРЕХОДА НА POSTGRESQL ЗАМЕНИТЬ НА:
+  # r2dbc:postgresql://localhost:5432/carddb
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb;DB_CLOSE_DELAY=-1
+    username: user
+    password: pass
+  
+  # Liquibase (миграции БД)
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+  # H2 Console (только для разработки)
+  h2:
+    console:
+      enabled: true
+
+  # Настройки JWT
+jwt:
+  secret: mySecretKeyForJWTGenerationInProductionChangeThis
+  expiration: 86400
+
+  # Springdoc OpenAPI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+
